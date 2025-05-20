@@ -607,7 +607,6 @@ func containerFields(isUpdatable bool) map[string]*schema.Schema {
 			Optional:    true,
 			Computed:    false,
 			ForceNew:    !isUpdatable,
-			Default:     false,
 			Description: "Restart policy for init container. One of Always, OnFailure, Never. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#restart-policy.",
 			ValidateFunc: validation.StringInSlice([]string{
 				string(api.RestartPolicyAlways),
